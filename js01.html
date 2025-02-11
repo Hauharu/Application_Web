@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+    <script>
+        function Tinhtuoi(){
+           var ten = document.getElementById("txtten").value;
+           var namsinh = Number(document.getElementById("txtnam").value)
+           if(ten =="")
+           {
+            alert ("Tên chưa đăng nhập");
+            return false;
+           }
+
+           if(namsinh == "" || isNaN(namsinh))
+           {
+            alert("Năm sinh phải có là số");
+            return false;
+           }
+           var d = new Date();
+           var tuoi = d.getFullYear() - namsinh
+           document.getElementById("ketqua").innerHTML="Chào bạn "+ ten +"<br> Tuổi bạn là " + tuoi ;
+        }
+        
+    </script>
+</head>
+<body>
+    <table width="50%">
+       <caption >CHƯƠNG TRÌNH TÍNH TUỔI</caption>
+       <tr>
+        <td width="30%">Nhập vào tên bạn: </td>
+            <td>
+                <input type="text" id="txtten" placeholder="Nhập tên bạn" >
+            </td>
+       </tr>
+       <tr>
+        <td width="30%">Nhập vào năm sinh: </td>
+        <td>
+            <input type="text" id="txtnam" placeholder="Nhập năm sinh" >
+        </td>
+       </tr> 
+    </table>
+    <button id="btTinhtuoi" onclick="Tinhtuoi()">Tính tuổi</button>
+    <p id="ketqua"></p>
+</body>

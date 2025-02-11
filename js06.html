@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 6</title>
+    <style>
+        table{
+            border: 2px solid black;
+            width: 50%;
+            
+        }
+    </style>
+    <script>
+         function Tinhtuoi(){
+           var ten = document.getElementById("txtten").value;
+           var namsinh = parseInt(document.forms["myform"]["ns"].value);
+           var mk = document.getElementById("txtpw").value;
+           var gioitinh = document.getElementById("sex").value;
+           var vande = document.getElementById("vdqt").value;
+           
+           if(ten =="")
+           {
+            alert ("Tên chưa đăng nhập");
+            return false;
+           }
+           if(mk =="")
+           {
+            alert ("Vui lòng nhập mật khẩu!");
+            return false;
+           }
+           if(namsinh == "" || isNaN(namsinh))
+           {
+            alert("Năm sinh phải có là số");
+            return false;
+           }
+           var d = new Date();
+           var tuoi = d.getFullYear() - namsinh
+           document.forms["myform"]["Thongtin"].value =" Chào mừng "+ ten +"\n Bạn là "+ gioitinh +"\n Mật khẩu bạn có "+ mk.length +" kí tự "+"\n Tuổi bạn là "+ tuoi +"\n Vấn đề bạn quan tâm là "+ vande ;
+           return false;
+        }
+    </script>
+</head>
+<body>
+    <form name="myform" onsubmit="return Tinhtuoi()">
+        <table border="1" align="center"> 
+            <caption><h2>ĐĂNG KÝ THÀNH VIÊN</h2></caption>
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td><input type="text" id="txtten" placeholder="Nhập tên bạn" ></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td><input type="password" id="txtpw" placeholder="Nhập mật khẩu"></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh</td>
+                <td><input type="date" name="ns"></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <input type="radio" id="sex" value="Nam">Nam
+                    <input type="radio" id="sex" value="Nữ">Nữ
+               </td>
+            </tr>
+            <tr>
+                <td>Vấn đề bạn quan tâm</td>
+                <td>
+                    <select id="vdqt" width="70px">
+                        <option value="Kinh tế">Kinh tế</option>
+                        <option value="Thể Thao">Thể thao</option>
+                        <option value="Văn học nghệ thuật">Văn học nghệ thuật</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="Đk" value="Đăng ký"></td>
+                <td><input type="reset" value="Hủy"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea name="Thongtin" rows="5" cols="100%" readonly></textarea></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,61 @@
+h1{
+    text-align: center;
+    color: blue;
+    text-shadow: 4px 2px 1px grey;
+}
+.banner{
+    background-color: #2E8A99;
+    color: white;
+    width: 100%;
+    height: 70px;
+    line-height: 10px;
+    font-weight: bold;
+}
+div div{
+    margin: 30px;
+    float: left;
+}
+
+img{
+    position: relative;
+    float: right;
+}
+
+a:link{
+    color: white;
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover{
+    font-size: 25px;
+    color: yellow;
+}
+
+a:active{
+    color: yellow;
+    text-decoration: underline;
+}
+
+h2{
+    color: gray;
+}
+
+#dktv{
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 25px;
+    background-color: blue;
+    color: white;
+}
+#dktv:hover{
+    background-color: aquamarine;
+    color: yellow;
+    cursor: pointer;
+}
+

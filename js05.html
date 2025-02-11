@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bài tập 5</title>
+    <style>
+        #bangCuuChuong {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Bảng cửu chương</h1>
+    <button onclick="inBangCuuChuong()">In bảng cửu chương</button>
+
+    <script>
+        function inBangCuuChuong() {
+            var result = "<table border='1'>";
+            // In số nhân 2, 3, 4, 5
+            for (var j = 1; j <= 9; j++) {
+                result += "<tr>";
+                for (var k = 2; k <= 5; k++) {
+                    result += "<td>" + k + " x " + j + " = " + (k * j) + "</td>";
+                }
+                result += "</tr>";
+            }
+            // Thêm khoảng trống giữa hai nhóm số nhân
+            result += "<tr><td colspan='4' style='height: 20px;'></td></tr>";
+            // In số nhân 6, 7, 8, 9
+            for (var j = 1; j <= 9; j++) {
+                result += "<tr>";
+                for (var k = 6; k <= 9; k++) {
+                    result += "<td>" + k + " x " + j + " = " + (k * j) + "</td>";
+                }
+                result += "</tr>";
+            }
+            result += "</table>";
+
+            // Hiển thị bảng cửu chương trong một phần tử có id là "bangCuuChuong"
+            document.getElementById("bangCuuChuong").innerHTML = result;
+        }
+    </script>
+    <div id="bangCuuChuong"></div>
+</body>
+</html>

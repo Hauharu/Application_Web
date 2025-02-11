@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bài tập 12</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">HÌNH</h1>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Vẽ hình
+        ctx.beginPath();
+        ctx.arc(100, 100, 80, 0, Math.PI * 2, false);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(70, 60);
+        ctx.lineTo(100, 20);
+        ctx.lineTo(130, 60);
+        ctx.closePath();
+        ctx.fillStyle = "black";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(100, 120, 35, 0, Math.PI, false);
+        ctx.fillStyle = "black";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(80, 80, 10, 0, Math.PI * 2, false);
+        ctx.arc(120, 80, 10, 0, Math.PI * 2, false);
+        ctx.fillStyle = "white";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(80, 80, 5, 0, Math.PI * 2, false);
+        ctx.arc(120, 80, 5, 0, Math.PI * 2, false);
+        ctx.fillStyle = "black";
+        ctx.fill();
+    </script>
+</body>
+</html>

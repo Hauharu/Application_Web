@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 7</title>
+    <style>
+        .number {
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #ccc;
+            margin: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Hiệu ứng khi di chuyển chuột</h1>
+    <div class="numbers">
+        <div class="number">1</div>
+        <div class="number">2</div>
+        <div class="number">3</div>
+        <div class="number">4</div>
+        <div class="number">5</div>
+        <div class="number">6</div>
+        <div class="number">7</div>
+        <div class="number">8</div>
+        <div class="number">9</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.number').mouseenter(function () {
+                $(this).css('background-color', 'yellow');
+            });
+
+            $('.number').mouseleave(function () {
+                $(this).css('background-color', 'white');
+            });
+        });
+    </script>
+</body>
+</html>

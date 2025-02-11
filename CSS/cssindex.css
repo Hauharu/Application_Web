@@ -1,0 +1,126 @@
+*{margin: 0px; padding: 0px;}
+.main{
+    display: flex;
+    flex-direction: column; 
+}
+.menu{
+    display: flex;
+    margin: 0px auto;
+}
+.menu div{
+    text-align: center;
+    margin: 40px;
+    width: 40%;
+}
+.banner{
+    height: 160px;
+    background-image: url(../images/anonymous.png);
+    font-size: 4em;
+    font-weight: bold;
+    color:red;
+    text-align: center;
+    text-shadow: 5px 5px 3px lightgreen;
+    line-height: 150px;
+
+}
+h2{
+    font-family: Times New Roman;
+    color: lightgreen;
+    font-size: 3em;
+}
+.content{
+    width:70% ;
+    min-height: 650px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    font-weight: 200px;
+}
+ul{
+    list-style-type: none;
+}
+.nav {
+    background: lightseagreen;
+    display: flex;
+    padding-left: 0 15px;
+    height: 2em;
+    line-height: 2em;
+    justify-content: center;
+    margin: 15px 0;
+    padding: 3px 0;
+    
+}
+.menu li >a {
+    padding-right: 2.1em;
+    color: white;
+    font-size: 15px;
+}
+.menu li>a:hover {
+    color: #e32879;
+}
+
+.menu-link {
+    position: relative;
+}
+
+.supmenu {
+    background: #049473;
+    width: 130px;
+    height: 12em;
+    margin: 0 auto;
+    position: absolute;
+    line-height: 3em;
+    top: 32px;
+    left: -36px;
+    border: 1px dashed white;
+    display: none;
+    transition: all .2s ease-out;
+    overflow: auto;
+}
+
+.supmenu li {
+    text-align: center;
+    padding: 0px;
+}
+
+.supmenu li>a {
+    color: white;   
+}
+.menu>.menu-link:hover>.supmenu {
+    display: block;
+}
+.nunu{
+    display: flex;
+    margin: 0px auto;
+}
+.nunu div{
+    text-align: center;
+    margin: 40px;
+    width: 40%;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.content div>a:hover{
+    color: black;
+
+}
+.left,.right{
+    width: 14%;
+    background-color: lightblue;
+}
+.right div{
+    width: 80%;
+    height: 150px;
+    background-color: burlywood;
+    border: 1px sold blue ;
+    border-radius: 20px;
+    box-shadow: 5px 10px gray;
+    margin-top: 20px;
+    margin-left:10px ;
+    text-align: center;
+    line-height: 150px;
+
+}
